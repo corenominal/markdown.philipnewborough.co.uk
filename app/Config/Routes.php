@@ -9,6 +9,7 @@ $routes->get('/', 'Home::index');
 
 // API routes
 $routes->match(['get', 'options'], '/api/test/ping', 'Api\Test::ping');
+$routes->match(['post', 'options'], '/api/converter', 'Api\Converter::index');
 
 // Command line routes
 $routes->cli('cli/test/index/(:segment)', 'CLI\Test::index/$1');
