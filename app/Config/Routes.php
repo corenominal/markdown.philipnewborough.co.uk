@@ -7,11 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-// Admin routes
-$routes->get('/admin', 'Admin\Home::index');
-$routes->get('/admin/datatable', 'Admin\Home::datatable');
-$routes->post('/admin/delete', 'Admin\Home::delete');
-
 // API routes
 $routes->match(['get', 'options'], '/api/test/ping', 'Api\Test::ping');
 
