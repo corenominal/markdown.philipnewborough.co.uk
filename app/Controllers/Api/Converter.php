@@ -6,7 +6,6 @@ use League\CommonMark\GithubFlavoredMarkdownConverter;
 
 class Converter extends BaseController
 {
-
     /**
      * Handles the conversion of Markdown to HTML via an API endpoint.
      *
