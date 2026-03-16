@@ -1,0 +1,99 @@
+/* Remove default main bottom padding so the editor sits flush above the footer */
+#main {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+#converter-header {
+    padding-top: 1rem;
+}
+
+/* Tab content area — height is driven by JS */
+#converterTabContent {
+    overflow: hidden;
+}
+
+#converterTabContent .tab-pane {
+    height: 100%;
+}
+
+/* Markdown input and HTML output textareas */
+#markdown-input,
+#html-output {
+    display: block;
+    height: 100%;
+    resize: none;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    outline: none;
+    box-shadow: none;
+    /* border-top: 1px solid var(--bs-border-color) !important; */
+}
+
+#markdown-input:focus,
+#html-output:focus {
+    box-shadow: none;
+}
+
+/* ---- Markdown preview styles ---- */
+.markdown-preview h1,
+.markdown-preview h2 {
+    border-bottom: 1px solid var(--bs-border-color);
+    padding-bottom: 0.3em;
+    margin-bottom: 1rem;
+}
+
+.markdown-preview table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+    border: 1px solid var(--bs-border-color);
+    padding: 0.5rem 0.75rem;
+}
+
+.markdown-preview th {
+    background-color: var(--bs-tertiary-bg);
+    font-weight: 600;
+}
+
+.markdown-preview pre {
+    background-color: var(--bs-tertiary-bg);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+}
+
+.markdown-preview pre code {
+    color: var(--bs-body-color);
+    background-color: transparent;
+    padding: 0;
+}
+
+.markdown-preview blockquote {
+    border-left: 4px solid var(--bs-border-color);
+    padding-left: 1rem;
+    margin-left: 0;
+    color: var(--bs-secondary-color);
+}
+
+.markdown-preview img {
+    max-width: 100%;
+    height: auto;
+}
+
+.markdown-preview hr {
+    border-color: var(--bs-border-color);
+}
+
+/* ---- Syntax guide code blocks ---- */
+.syntax-block {
+    background-color: var(--bs-tertiary-bg);
+    border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
+    font-size: 0.85rem;
+    white-space: pre;
+    overflow-x: auto;
+}

@@ -96,24 +96,26 @@
 
             <!-- MAIN CONTENT + FOOTER -->
             <div class="d-flex flex-column flex-grow-1 overflow-auto">
-                <main id="main" class="flex-grow-1 pt-3 pb-5 px-2">
+                <main id="main" class="flex-grow-1 pt-3 px-2">
                     <?= $this->renderSection('content') ?>
                 </main>
 
                 <!-- FOOTER -->
-                <footer class="border-top py-4 px-3 mx-4 text-center">
-                    <span class="text-secondary">
-                        <span class="flip-horizontal">&copy;</span> <?= date('Y') ?> Philip Newborough. All rights reserved.<br>
-                        <a class="text-decoration-none me-2" href="<?= config('Urls')->license ?>"><i class="bi bi-file-earmark-text-fill"></i> License</a>
-                        <a class="text-decoration-none" href="<?= config('Urls')->github ?>"><i class="bi bi-github"></i> GitHub</a>
-                    </span>
-                    <?php // is_admin session is set and true
-                    if( session()->get('is_admin') ):
-                    ?>
-                    <br>
-                    <span class="text-secondary d-inline-block pt-2"><strong>Hostname:</strong> <?= gethostname() ?><br><strong>PHP version:</strong> <?= phpversion() ?> / <strong>CodeIgniter version:</strong> <?= \CodeIgniter\CodeIgniter::CI_VERSION ?></span>
-                    <?php endif; ?>
-                </footer>
+                <div class="container">
+                    <footer class="border-top py-4 text-center">
+                        <span class="text-secondary">
+                            <span class="flip-horizontal">&copy;</span> <?= date('Y') ?> Philip Newborough. All rights reserved.<br>
+                            <a class="text-decoration-none me-2" href="<?= config('Urls')->license ?>"><i class="bi bi-file-earmark-text-fill"></i> License</a>
+                            <a class="text-decoration-none" href="<?= config('Urls')->github ?>"><i class="bi bi-github"></i> GitHub</a>
+                        </span>
+                        <?php // is_admin session is set and true
+                        if( session()->get('is_admin') ):
+                        ?>
+                        <br>
+                        <span class="text-secondary d-inline-block pt-2"><strong>Hostname:</strong> <?= gethostname() ?><br><strong>PHP version:</strong> <?= phpversion() ?> / <strong>CodeIgniter version:</strong> <?= \CodeIgniter\CodeIgniter::CI_VERSION ?></span>
+                        <?php endif; ?>
+                    </footer>
+                </div>
                 <!-- /FOOTER -->
             </div>
             <!-- /MAIN CONTENT + FOOTER -->
