@@ -3,7 +3,7 @@
 <?= $this->section('content') ?>
 <div id="converter-wrapper" class="container">
 
-    <div id="converter-header" class="px-3">
+    <div id="converter-header" class="">
         <div class="mb-3 pb-2 d-flex align-items-center justify-content-between">
             <h1 class="h3 mb-0">Markdown Converter</h1>
             <button id="download-md-btn" class="btn btn-sm btn-outline-primary" title="Download as Markdown file" disabled>
@@ -30,22 +30,22 @@
 
         <!-- Markdown panel -->
         <div class="tab-pane fade show active" id="markdown-pane" role="tabpanel" aria-labelledby="markdown-tab" tabindex="0">
-            <textarea id="markdown-input" class="w-100 border-0 p-3 font-monospace" placeholder="Type or paste your Markdown here..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+            <textarea id="markdown-input" class="w-100 border-0 py-4 font-monospace" placeholder="Type or paste your Markdown here..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
         </div>
 
         <!-- HTML panel -->
         <div class="tab-pane fade" id="html-pane" role="tabpanel" aria-labelledby="html-tab" tabindex="0">
-            <textarea id="html-output" class="w-100 border-0 p-3 font-monospace" readonly placeholder="Converted HTML will appear here..."></textarea>
+            <textarea id="html-output" class="w-100 border-0 py-4 font-monospace" readonly placeholder="Converted HTML will appear here..."></textarea>
         </div>
 
         <!-- Preview panel -->
         <div class="tab-pane fade overflow-auto" id="preview-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
-            <div id="preview-output" class="container-fluid p-4 markdown-preview"></div>
+            <div id="preview-output" class="py-4 markdown-preview"></div>
         </div>
 
         <!-- Syntax panel -->
         <div class="tab-pane fade overflow-auto" id="syntax-pane" role="tabpanel" aria-labelledby="syntax-tab" tabindex="0">
-            <div class="container-fluid p-4" id="syntax-guide">
+            <div class="py-4" id="syntax-guide">
 
                 <h2 class="h5 mb-4 text-secondary">Editor Usage</h2>
                 <div class="row g-4 mb-5">
